@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public List<Sprite> backPack;
+    public List<Sprite> backPack = new List<Sprite>();
     private int m_BackPackIndex = 0;
 
     private void Awake()

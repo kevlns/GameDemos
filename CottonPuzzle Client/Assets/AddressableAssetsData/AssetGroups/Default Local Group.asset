@@ -17,8 +17,43 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: c61255868c5ddb94483b9f0c0362d98b
   m_SerializeEntries:
+  - m_GUID: 215da388bf76024408e3d39530b36fbc
+    m_Address: right_arrow
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2718c7b7bf4ca3c40b1b0c539ed7f762
+    m_Address: prop_bg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5e5168617571527479662541ecfda732
+    m_Address: right_arrow_down
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 62c27dc0ecc06854b8666d7bdef59129
+    m_Address: left_arrow_disable
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 704f0dbf9e8868444b1f4a71461d26bf
+    m_Address: key_prop
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 70b96a9b993894f46af52fb668eff6bb
     m_Address: H2_talk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7a9b77dd1170b234a9f9202572fe5fe1
+    m_Address: menu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8bcc2f024d2706140a31af15ac70b865
+    m_Address: left_arrow_down
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -27,8 +62,23 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a251e7b7852bd894084439d7adad3e75
+    m_Address: prop_hint_bg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ccf7088162f6b9146af0becc5782d8bf
+    m_Address: left_arrow
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d1bd53f30742b8c4d88c7166448b9a3e
     m_Address: H2_default
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5fabcb638c9e8d498f1585389e3ad1e
+    m_Address: right_arrow_disable
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

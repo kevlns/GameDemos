@@ -19,7 +19,7 @@ public class H2Contents : MonoBehaviour
     void Start()
     {
         // todo 从 GameManager 还原场景
-        
+
         Addressables.LoadAssetAsync<Sprite>("H2_default").Completed += (handle) =>
         {
             if (handle.Status == AsyncOperationStatus.Succeeded)
@@ -31,27 +31,34 @@ public class H2Contents : MonoBehaviour
         m_ToH4Button.GetComponent<Button>().onClick.AddListener(OnToH4BtnClicked);
         m_KeyButton.GetComponent<Button>().onClick.AddListener(OnKeyPropClicked);
     }
-    
+
     void OnToH1BtnClicked()
     {
         // todo 存储场景状态
         Addressables.LoadSceneAsync("H1");
     }
-    
+
     void OnToH2ABtnClicked()
     {
         // todo 存储场景状态
-        Addressables.LoadSceneAsync("H2A");
+        Debug.Log("To H2A");
     }
 
     void OnToH4BtnClicked()
     {
         // todo 存储场景状态
-        Addressables.LoadSceneAsync("H1");
+        Debug.Log("To H4");
     }
-    
+
     void OnKeyPropClicked()
     {
-        
+        // 添加到背包
+        Addressables.LoadAssetAsync<Sprite>("key_prop").Completed += (handle) =>
+        {
+            GameManager.Instance.backPack.Add(handle.Result);
+        };
+
+        // 删除场景元素
+        Destroy(m_KeyButton.gameObject);
     }
 }
