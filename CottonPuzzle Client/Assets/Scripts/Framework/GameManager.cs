@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public List<Sprite> backPack = new List<Sprite>();
-    private int m_BackPackIndex = 0;
+    
+    public event Action OnBackPackUpdate;
 
     private void Awake()
     {
@@ -21,5 +22,10 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         // todo 读档
+    }
+
+    public void LazyBackPackUpdateEvent()
+    {
+        OnBackPackUpdate ?.Invoke();
     }
 }

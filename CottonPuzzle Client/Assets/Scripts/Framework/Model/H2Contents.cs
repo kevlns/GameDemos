@@ -60,5 +60,8 @@ public class H2Contents : MonoBehaviour
 
         // 删除场景元素
         Destroy(m_KeyButton.gameObject);
+
+        // 发送背包更新事件
+        GameManager.Instance.LazyBackPackUpdateEvent();
     }
 }
