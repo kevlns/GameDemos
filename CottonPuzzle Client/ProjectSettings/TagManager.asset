@@ -4,13 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - NewGameButton
-  - ToH1Button
-  - ToH2Button
-  - ToH2AButton
-  - ToH3Button
-  - ToH4Button
-  - Key
+  - H1toH2
+  - H2toH1
+  - H2toH2A
+  - H2toH4
+  - H2AtoH2
+  - H4toH2
+  - H3toH2
+  - Collectable
   layers:
   - Default
   - TransparentFX

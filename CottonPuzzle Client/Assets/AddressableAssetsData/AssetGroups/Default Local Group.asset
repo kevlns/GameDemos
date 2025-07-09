@@ -17,6 +17,11 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: c61255868c5ddb94483b9f0c0362d98b
   m_SerializeEntries:
+  - m_GUID: 16ea1b5833750c044b8ae36887ed8f43
+    m_Address: StatsWindow
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 215da388bf76024408e3d39530b36fbc
     m_Address: right_arrow
     m_ReadOnly: 0
@@ -37,8 +42,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 704f0dbf9e8868444b1f4a71461d26bf
-    m_Address: key_prop
+  - m_GUID: 6355618eae7317c4787268d5563af14d
+    m_Address: StartMenu
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -57,11 +62,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9fc0d4010bbf28b4594072e72b8655ab
-    m_Address: H1
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a251e7b7852bd894084439d7adad3e75
     m_Address: prop_hint_bg
     m_ReadOnly: 0
@@ -72,11 +72,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cd9dacd9ae1e3f648a51c59615891ca6
-    m_Address: MainUI
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d1bd53f30742b8c4d88c7166448b9a3e
     m_Address: H2_default
     m_ReadOnly: 0
@@ -84,16 +79,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d5fabcb638c9e8d498f1585389e3ad1e
     m_Address: right_arrow_disable
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e7ce4b1bf218df142b59a797e818d281
-    m_Address: H2
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fc7f491477136164faf6ebb6edbf609e
-    m_Address: Home
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
