@@ -5,6 +5,7 @@ using UnityEngine;
 public class SaveManager : Singleton<SaveManager>
 {
     private string m_SaveRoot;
+    public SaveCache Cache = new SaveCache();
 
     protected override void Awake()
     {
@@ -61,4 +62,9 @@ public class SaveManager : Singleton<SaveManager>
             System.IO.Directory.CreateDirectory(m_SaveRoot);
         return m_SaveRoot + "/";
     }
+}
+
+public class SaveCache
+{
+    public H2AModelData H2AModelDataCache;
 }

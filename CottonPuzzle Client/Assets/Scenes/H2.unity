@@ -224,6 +224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c652e80a9b2c24caf3e83e871f2e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_H2A: {fileID: 55669245}
+  m_H2toH3: {fileID: 1698177893}
 --- !u!1001 &55669243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -308,6 +310,11 @@ PrefabInstance:
 --- !u!4 &55669244 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 387400201252596312, guid: 52e801dd8c6ad66479dce7878db108eb, type: 3}
+  m_PrefabInstance: {fileID: 55669243}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &55669245 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2560599283424060134, guid: 52e801dd8c6ad66479dce7878db108eb, type: 3}
   m_PrefabInstance: {fileID: 55669243}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &992812016
@@ -625,7 +632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2560599283424060134, guid: 52e801dd8c6ad66479dce7878db108eb, type: 3}
       propertyPath: m_TagString
-      value: H2toH4
+      value: H2toH3
       objectReference: {fileID: 0}
     - target: {fileID: 6803449587149207331, guid: 52e801dd8c6ad66479dce7878db108eb, type: 3}
       propertyPath: m_Size.x
@@ -652,6 +659,11 @@ PrefabInstance:
 --- !u!4 &1698177892 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 387400201252596312, guid: 52e801dd8c6ad66479dce7878db108eb, type: 3}
+  m_PrefabInstance: {fileID: 1698177891}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1698177893 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2560599283424060134, guid: 52e801dd8c6ad66479dce7878db108eb, type: 3}
   m_PrefabInstance: {fileID: 1698177891}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1757390374

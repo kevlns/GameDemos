@@ -60,8 +60,7 @@ public class StatsWindow : MonoBehaviour
 
     private void OnDisable()
     {
-        if (gameObject != null)
-            DataManager.Instance.BackPackUpdatedEvent -= RefreshView;
+        if (DataManager.IsInitialized()) DataManager.Instance.BackPackUpdatedEvent -= RefreshView;
     }
 
     void RefreshView()

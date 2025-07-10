@@ -53,7 +53,12 @@ public class H2AModel : MonoBehaviour
 
     private void Restore()
     {
-        H2AModelData data = SaveManager.Instance.Load<H2AModelData>("H2AModel");
+        H2AModelData data = null;
+        if (SaveManager.Instance.Cache.H2AModelDataCache != null)
+            data = SaveManager.Instance.Cache.H2AModelDataCache;
+        else
+            data = SaveManager.Instance.Load<H2AModelData>("H2AModel");
+
         if (data != null)
         {
             for (int i = 0; i < data.Nodes.Count && i < m_Nodes.Count; i++)
@@ -67,8 +72,7 @@ public class H2AModel : MonoBehaviour
 
     private void OnDisable()
     {
-        if (gameObject != null)
-            MouseManager.Instance.OnClicked -= OnObjClicked;
+        if (MouseManager.IsInitialized()) MouseManager.Instance.OnClicked -= OnObjClicked;
     }
 
     void OnObjClicked(GameObject nodeGo)
@@ -127,15 +131,22 @@ public class H2AModel : MonoBehaviour
 
     public void Save()
     {
-        H2AModelData data = new H2AModelData();
-        data.IsPass = m_IsPass;
-        foreach (var nodeTransform in m_Nodes)
+        if (SaveManager.Instance.Cache.H2AModelDataCache == null)
+            SaveManager.Instance.Cache.H2AModelDataCache = new H2AModelData();
+
+        SaveManager.Instance.Cache.H2AModelDataCache.IsPass = m_IsPass;
+
+        for (int i = 0; i < m_Nodes.Count; ++i)
         {
-            H2ANode node = nodeTransform.GetComponent<H2ANode>();
-            data.Nodes.Add(new H2ANodeData(node.transform.position));
+            H2ANode node = m_Nodes[i].GetComponent<H2ANode>();
+
+            if (i >= SaveManager.Instance.Cache.H2AModelDataCache.Nodes.Count)
+                SaveManager.Instance.Cache.H2AModelDataCache.Nodes.Add(new H2ANodeData(node.transform.position));
+            else
+                SaveManager.Instance.Cache.H2AModelDataCache.Nodes[i].Position = node.transform.position;
         }
 
-        string json = JsonUtility.ToJson(data);
+        string json = JsonUtility.ToJson(SaveManager.Instance.Cache.H2AModelDataCache);
         string path = SaveManager.Instance.GetSaveRoot() + "H2AModel.json";
         System.IO.File.WriteAllText(path, json);
     }

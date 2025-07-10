@@ -15,6 +15,7 @@ TagManager:
   - H2AReset
   - H2ANode
   - H2A
+  - H2toH3
   layers:
   - Default
   - TransparentFX
