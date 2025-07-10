@@ -24,6 +24,10 @@ public class StatsWindow : MonoBehaviour
     private Sprite m_LeftArrowDisableSprite;
     private Sprite m_RightArrowDisableSprite;
 
+    private Dictionary<string, string> m_Hints = new Dictionary<string, string>
+    {
+        { "prop_key", "MailBox Key" }
+    };
 
     private void Awake()
     {
@@ -34,22 +38,22 @@ public class StatsWindow : MonoBehaviour
         m_PropButton.onClick.AddListener(OnPropBtnClicked);
         m_CurSpriteViewIndex = 0;
 
-        SpriteUtil.SetSprite("left_arrow", (sprite) =>
+        SpriteUtil.LoadSprite("left_arrow", (sprite) =>
         {
             m_LeftArrowEnableSprite = sprite;
             RefreshView();
         });
-        SpriteUtil.SetSprite("right_arrow", (sprite) =>
+        SpriteUtil.LoadSprite("right_arrow", (sprite) =>
         {
             m_RightArrowEnableSprite = sprite;
             RefreshView();
         });
-        SpriteUtil.SetSprite("left_arrow_disable", (sprite) =>
+        SpriteUtil.LoadSprite("left_arrow_disable", (sprite) =>
         {
             m_LeftArrowDisableSprite = sprite;
             RefreshView();
         });
-        SpriteUtil.SetSprite("right_arrow_disable", (sprite) =>
+        SpriteUtil.LoadSprite("right_arrow_disable", (sprite) =>
         {
             m_RightArrowDisableSprite = sprite;
             RefreshView();
@@ -70,10 +74,20 @@ public class StatsWindow : MonoBehaviour
             if (!m_NameToSprite.ContainsKey(Pair.Key))
             {
                 m_NameToSprite.Add(Pair.Key, null);
-                Addressables.LoadAssetAsync<Sprite>(Pair.Key).Completed += (handle) =>
+                SpriteUtil.LoadSprite(Pair.Key, (sprite) =>
                 {
-                    m_NameToSprite[Pair.Key] = handle.Result;
-                };
+                    if (sprite != null)
+                    {
+                        m_NameToSprite[Pair.Key] = sprite;
+                        if (m_CurSpriteViewIndex >= 0 && m_CurSpriteViewIndex < m_NameToSprite.Count)
+                        {
+                            m_PropImg.sprite = m_NameToSprite.ElementAt(m_CurSpriteViewIndex).Value;
+                            m_PropHintText.text = m_Hints[m_PropImg.sprite.name];
+                            m_PropImg.color = new Color(1, 1, 1, 1);
+                            m_PropImg.preserveAspect = true;
+                        }
+                    }
+                });
             }
         }
 
@@ -97,12 +111,6 @@ public class StatsWindow : MonoBehaviour
         {
             m_RightArrowImg.sprite = m_RightArrowDisableSprite;
             m_RightButton.enabled = false;
-        }
-
-        if (m_CurSpriteViewIndex >= 0 && m_CurSpriteViewIndex < m_NameToSprite.Count)
-        {
-            m_PropImg.sprite = m_NameToSprite[m_NameToSprite.ElementAt(m_CurSpriteViewIndex).Key];
-            m_PropHintText.text = m_PropImg.sprite.name;
         }
     }
 

@@ -11,6 +11,8 @@ public class SaveManager : Singleton<SaveManager>
     {
         base.Awake();
         m_SaveRoot = Application.persistentDataPath + "/.DS";
+
+        Cache.H2AModelDataCache = Load<H2AModelData>("H2AModel");
     }
 
     public T Load<T>(string modelName) where T : class

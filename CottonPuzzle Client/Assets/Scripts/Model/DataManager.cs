@@ -66,3 +66,9 @@ public class DataManager : Singleton<DataManager>
         return false;
     }
 }
+
+[Serializable]
+public class BackPackData
+{
+    public Dictionary<string, int> BackPack;
+}

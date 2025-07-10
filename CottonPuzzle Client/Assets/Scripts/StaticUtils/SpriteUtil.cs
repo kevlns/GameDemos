@@ -4,7 +4,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class SpriteUtil : MonoBehaviour
 {
-    public static void SetSprite(string fileKey, System.Action<Sprite> onLoaded)
+    public static void LoadSprite(string fileKey, System.Action<Sprite> onLoaded)
     {
         Addressables.LoadAssetAsync<Sprite>(fileKey).Completed += handle =>
         {
