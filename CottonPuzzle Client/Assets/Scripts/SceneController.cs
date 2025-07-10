@@ -16,6 +16,7 @@ public class SceneController : Singleton<SceneController>
     {
         if (!string.IsNullOrEmpty(from))
         {
+            SaveManager.Instance.Save(from);
             yield return SceneManager.UnloadSceneAsync(from);
         }
 

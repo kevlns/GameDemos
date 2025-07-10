@@ -58,9 +58,10 @@ public class StatsWindow : MonoBehaviour
         DataManager.Instance.BackPackUpdatedEvent += RefreshView;
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
-        DataManager.Instance.BackPackUpdatedEvent -= RefreshView;
+        if (gameObject != null)
+            DataManager.Instance.BackPackUpdatedEvent -= RefreshView;
     }
 
     void RefreshView()

@@ -12,6 +12,9 @@ TagManager:
   - H4toH2
   - H3toH2
   - Collectable
+  - H2AReset
+  - H2ANode
+  - H2A
   layers:
   - Default
   - TransparentFX

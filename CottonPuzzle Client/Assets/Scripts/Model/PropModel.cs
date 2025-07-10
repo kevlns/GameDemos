@@ -21,7 +21,8 @@ public class PropModel : MonoBehaviour
 
     private void OnDisable()
     {
-        MouseManager.Instance.OnClicked -= OnClicked;
+        if (gameObject != null)
+            MouseManager.Instance.OnClicked -= OnClicked;
     }
 
     private void OnClicked(GameObject go)
